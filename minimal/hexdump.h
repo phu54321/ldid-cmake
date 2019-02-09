@@ -38,15 +38,15 @@
 #ifndef MINIMAL_HEXDUMP_H
 #define MINIMAL_HEXDUMP_H
 
-#include "minimal/stdlib.h"
+#include "stdlib.h"
 
-_disused static char hexchar(uint8_t value) {
+char hexchar(uint8_t value) {
     return value < 0x20 || value >= 0x80 ? '.' : value;
 }
 
 #define HexWidth_ 12
 
-_disused static void hexdump(const char *mark, const uint8_t *data, size_t size) {
+void hexdump(const char *mark, const uint8_t *data, size_t size) {
     size_t i = 0, j;
 
     while (i != size) {

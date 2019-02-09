@@ -47,7 +47,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
-#include "minimal/stdlib.h"
+#include "stdlib.h"
 
 void *map(const char *path, size_t offset, size_t size, size_t *psize, bool ro) {
     int fd;
